@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    image: alkselsv/devops-example-app
+
+  caddy:
+    build:
+      context: .
+      dockerfile: services/caddy/Dockerfile
+    image: alkselsv/devops-example-caddy
